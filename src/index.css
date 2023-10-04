@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;600;700&display=swap'); */
+/* @import url("https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400;500;600;700&family=Josefin+Slab:wght@400;500;600;700&display=swap"); */
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;600;700&family=Texturina:opsz,wght@12..72,400;12..72,500;12..72,700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;600;700&family=Jura:wght@300;400;500;600;700&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;600;700&family=Jura:wght@300;400;500;600;700&family=Oxanium:wght@400;500;600;700&display=swap");
+body {
+	margin: 0;
+	padding: 0;
+	/* background: #678a8a; */
+	/* font-family: "Expletus Sans", cursive;
+	font-family: "Josefin Slab", serif; */
+	/* font-family: 'Texturina', serif; */
+}
+.bg {
+	background-color: rgba(23, 23, 23, 0.7);
+}
+.bgimg {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: -1;
+	background-image: url(../public/ChatGPT-1280x720.jpg);
+	background-position: center;
+	background-size: cover;
+	filter: brightness(0.4);
+	background-repeat: no-repeat;
+}
+.scrol::-webkit-scrollbar {
+	width: 7px;
+}
+.scrol::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: rgb(37, 37, 37);
+}
+.scrol::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: rgb(73, 73, 73);
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.anim {
+	animation: rotate infinite 7s linear;
+}
+
+.word::first-letter {
+	text-transform: capitalize;
+}
+.lds-ellipsis {
+	display: inline-block;
+	position: relative;
+	left: -8%;
+	width: 0px;
+	height: 0px;
+}
+.lds-ellipsis div {
+	position: absolute;
+	top: -11px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #fff;
+	animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+	left: 8px;
+	animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+	left: 8px;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+	left: 32px;
+	animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+	left: 56px;
+	animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes lds-ellipsis3 {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+@keyframes lds-ellipsis2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(24px, 0);
+	}
+}
